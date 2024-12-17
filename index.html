@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar: A responsive navigation bar -->
+    <!-- `navbar`, `navbar-expand-md` for expanding on medium screens, `bg-light` for light background -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="#">Portfolio</a>
+        <!-- Button to collapse navbar on smaller screens -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar items -->
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav ml-auto"> <!-- Align links to the right with `ml-auto` -->
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section: Full-width hero section -->
+    <!-- `container-fluid` for full width, and text alignment classes -->
+    <header class="page-header header container-fluid">
+        <div class="overlay"></div> 
+        <div class="description text-center text-white">
+            <h1 class="text-uppercase">Hello, I'm Chhoma Gurung</h1> 
+            <p>Aspiring Software Developer | Year Up Trainee</p>
+            <!-- Button with outline style -->
+            <button class="btn btn-outline-light btn-lg" onclick="window.location='#portfolio'">View My Work</button>
+        </div>
+    </header>
+
+    <!-- Portfolio Section: Responsive grid layout -->
+    <!-- `container` centers the section, `row` defines the grid -->
+    <div class="container features" id="portfolio">
+        <h2 class="text-center text-uppercase font-weight-bold mb-4">My Projects</h2>
+        <div class="row">
+            <!-- Each project uses `col-*` to adjust width on different screen sizes -->
+            <div class="col-lg-4 col-md-4 col-sm-6 text-center">
+                <h5 class="text-uppercase font-weight-bold">Retirement Planner</h5>
+                <!-- `img-fluid` makes the image responsive -->
+                <img src="images/retirement.jpeg" class="img-fluid mb-3" alt="Retirement Planner">
+                <p>Built using Python, Flask, and Plotly for financial projections.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 text-center">
+                <h5 class="text-uppercase font-weight-bold">Responsive Website</h5>
+                <img src="images/mala.jpg" class="img-fluid mb-3" alt="Restaurant Website">
+                <p>HTML and CSS project showcasing a modern restaurant page.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 text-center">
+                <h5 class="text-uppercase font-weight-bold">Library System</h5>
+                <img src="images/ERD.png" class="img-fluid mb-3" alt="Library System">
+                <p>Developed with Python and MySQL to manage book records efficiently.</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Skills section with centered cards -->
+    <div class="background">
+        <div class="container skills">
+            <h2 class="text-center text-white text-uppercase font-weight-bold mb-4">Technical Skills</h2>
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-3 col-sm-4 text-center">
+                    <div class="card"> <!-- `card` creates a structured box -->
+                        <img src="images/python-icon.webp" class="card-img-top rounded-circle" alt="Python">
+                        <div class="card-body">
+                            <h5 class="text-uppercase font-weight-bold">Python</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 text-center">
+                    <div class="card">
+                        <img src="images/javascript-icon.png" class="card-img-top rounded-circle" alt="JavaScript">
+                        <div class="card-body">
+                            <h5 class="text-uppercase font-weight-bold">JavaScript</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 text-center">
+                    <div class="card">
+                        <img src="images/sql-icon.png" class="card-img-top rounded-circle" alt="SQL">
+                        <div class="card-body">
+                            <h5 class="text-uppercase font-weight-bold">SQL</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 text-center">
+                    <div class="card">
+                        <img src="images/HTML-ICON.png" class="card-img-top rounded-circle" alt="HTML">
+                        <div class="card-body">
+                            <h5 class="text-uppercase font-weight-bold">HTML</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact form with centered inputs -->
+    <div class="container features" id="contact">
+        <h2 class="text-center text-uppercase font-weight-bold">Contact Me</h2>
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary btn-block">Send Message</button>
+        </form>
+    </div>
+
+    <footer class="bg-dark text-white text-center">
+		<div>© 2024 Chhoma Gurung. All Rights Reserved.</div>
+		<div>
+			<!-- GitHub and LinkedIn links with simple text -->
+			<a href="https://github.com/chhomagrg" target="_blank" class="text-white">GitHub</a> |
+			<a href="https://www.linkedin.com/in/chhoma-gurung-53bb93207/" target="_blank" class="text-white">LinkedIn</a>
+		</div>
+	</footer>
+
+    <!-- Bootstrap JS for interactivity -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
